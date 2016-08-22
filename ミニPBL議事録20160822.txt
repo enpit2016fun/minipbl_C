@@ -92,3 +92,5 @@ https://github.com/Shinpeim/introduction-to-git/blob/master/09_clone.md
 　
 明日以降の作業
 ・発表資料(水曜日着手予定)
+
+頑張りましょう！
