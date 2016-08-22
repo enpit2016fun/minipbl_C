@@ -8,10 +8,8 @@
     });
 
     /* --------------------------------- Event Registration -------------------------------- */
-    $('.search-key').on('keyup', findByName);
-    $('.help-btn').on('click', function() {
-        alert("Employee Directory v3.4");
-    });
+      $('.search-key').on('keyup', findByName);
+
 
     /* ---------------------------------- Local Functions ---------------------------------- */
     function findByName() {
