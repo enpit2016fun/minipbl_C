@@ -6,17 +6,23 @@
 
     <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 </head>
 <body>
 
-<div class='header'><h1>つくしのこ保育園　園児名簿登録</h1></div>
+<div class='header'><h2><center>つくしのこ保育園<BR>　園児名簿登録</center></h2></div>
 <p>以下に必要事項を入力してください
 </p>
 <FORM>
 園児のお名前<BR>
 <INPUT type=“test” name=“name”></P>
 住所<BR>
-<INPUT type=“test” name=“adress”></P>
+<!-- ▼郵便番号入力フィールド(7桁) -->
+<input type="text" name="zip11" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">
+<!-- ▼住所入力フィールド(都道府県+以降の住所) -->
+<input type="text" name="addr11" size="60">
+<BR>
+
 電話番号(緊急連絡先)<BR>
 <INPUT type=“test” name=“tel”></P>
 卒園年度(在園中の方は卒園予定年度)<BR>
@@ -38,7 +44,7 @@
 
 </FORM>
 
-
+<A href=“next.html”><center>確認画面へ</center></A>
 
 </body>
 </html>
