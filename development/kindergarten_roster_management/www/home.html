@@ -10,17 +10,17 @@
 </head>
 <body>
 
-<div class='header'><h2><center>つくしのこ保育園<BR>　園児名簿登録</center></h2></div>
+<div class='header'><h2><center>つくしのこ保育園<BR>園児名簿登録</center></h2></div>
 <p>以下に必要事項を入力してください
 </p>
 <FORM>
 園児のお名前<BR>
 <INPUT type=“test” name=“name”></P>
-住所<BR>
+
 <!-- ▼郵便番号入力フィールド(7桁) -->
-<input type="text" name="zip11" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">
+郵便番号<BR><input type="text" name="zip11" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">
 <!-- ▼住所入力フィールド(都道府県+以降の住所) -->
-<input type="text" name="addr11" size="60">
+<BR>住所<BR><input type="text" name="addr11" size="60">
 <BR>
 
 電話番号(緊急連絡先)<BR>
@@ -38,13 +38,23 @@
 </SELECT>
 
 <P>メールアドレス(任意)<BR>
-<INPUT type=“test” name=“mail”></P>
+<INPUT type=“test” name=“mail”>@
 
+<SELECT name=“mailadress”>
+<OPTION value=“docomo”>docomo.ne.jp</OPTION>
+<OPTION value=“au”>ezweb.ne.jp</OPTION>
+<OPTION value=“soft bank”>softbank.ne.jp</OPTION>
+<OPTION value=“yahoo”>yahoo.ne.jp</OPTION>
+<OPTION value=“gmail”>gmail.com</OPTION>
+</SELECT>
+<BR>上記のメールアドレスにない方はこちら<BR>
+<INPUT type=“test” name=“mail”>
 
-
+</p>
 </FORM>
 
-<A href=“next.html”><center>確認画面へ</center></A>
+
+<A href=“comfirmation.html”><center><button class=“kakunin”>確認画面へ</button></center></A>
 
 </body>
 </html>
