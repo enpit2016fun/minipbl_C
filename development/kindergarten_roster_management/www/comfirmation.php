@@ -23,11 +23,13 @@
 電話番号(緊急連絡先)<BR>
 <?PHP echo $_POST["tel"];?><BR>
 
-メールアドレス<BR>
-<?PHP echo $_POST["mail"];?><BR>
+
 
 卒園年度(在園中の方は卒園予定年度)<BR>
-<?PHP echo $_POST["sotuen"];?><BR>
+<?PHP echo $_POST["sotsuen"];?>年度<BR>
+
+メールアドレス<BR>
+<?PHP echo $_POST["mail1"];?>@<?PHP echo $_POST["mailaddress"];?><BR>
 
  <center><p>以上の入力でよろしければ「登録する」ボタンを,<BR>
 変更点があれば「戻る」ボタンを押してください
