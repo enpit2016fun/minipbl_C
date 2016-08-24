@@ -130,6 +130,7 @@
         function year_outputSelectedValueAndText(obj) {
             var idx = obj.selectedIndex;
             var value = obj.options[idx].value; // 値
+            yearindx = value;
             year = obj.options[idx].text;  // 表示テキスト
             console.log('value = ' + value + ', ' + 'text = ' + year);
         }
@@ -137,6 +138,7 @@
         function month_outputSelectedValueAndText(obj) {
             var idx = obj.selectedIndex;
             var value = obj.options[idx].value; // 値
+            monthindx = value;
             month = obj.options[idx].text;  // 表示テキスト
             console.log('value = ' + value + ', ' + 'text = ' + month);
         }
@@ -144,6 +146,7 @@
         function day_outputSelectedValueAndText(obj) {
             var idx = obj.selectedIndex;
             var value = obj.options[idx].value; // 値
+            dayindx = value;
             day = obj.options[idx].text;  // 表示テキス
             console.log('value = ' + value + ', ' + 'text = ' + day);
         }
@@ -151,16 +154,13 @@
         function week_outputSelectedValueAndText(obj) {
             var idx = obj.selectedIndex;
             var value = obj.options[idx].value; // 値
+            weekindx = value;
             week = obj.options[idx].text;  // 表示テキスト
             console.log('value = ' + value + ', ' + 'text = ' + week);
         }
         
         function OnButtonClick() {
             if ((eve != 0) && (year != 0) && (month != 0) && (day != 0) && (week != 0)) { // インデックスが0番でなかったら
-                console.log(eve);
-                console.log(eve);
-                console.log(eve);
-                console.log(eve);
                 console.log(eve);
                 //var text = "イベント：" + eve + " " + year + month + day + week;
                 //document.write(text);
