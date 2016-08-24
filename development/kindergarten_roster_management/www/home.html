@@ -13,15 +13,16 @@
 <title>園児名簿登録フォーム</title>
 </head>
 
-<body background=“0410_gingham.jpg” bgcolor=“#ffc8c8” text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+<body  bgcolor=“#ffc8c8” >
 
 <div class='header'><h2><center><font face=monospace>つくしの子保育園<BR>園児名簿登録</font></center></h2></div>
-<p>以下に必要事項を入力してください
+<font face=fantasy>
+<p><center>以下に必要事項を入力してください</center>
 </p>
 
-<form action=http://localhost:8888/home.php method=“post”>
+<form action=http://localhost:8888/comfirmation.php method=“GET”>
 
-園児のお名前<BR><input type=“text” name=“nametest” />
+園児のお名前<BR><input type=“text” name=name />
 <BR>
 
 <!-- ▼郵便番号入力フィールド(7桁) -->
@@ -31,7 +32,7 @@
 <BR>
 
 電話番号(緊急連絡先)(半角英数)<BR>
-<INPUT type=“text” name=“tel”></P>
+<INPUT type=“text” name=tel></P>
 卒園年度(在園中の方は卒園予定年度)<BR>
 <SELECT name=sotsuen>
 <OPTION value=“2010”>2010年</OPTION>
@@ -69,6 +70,6 @@
 
 <center><button type =‘submit’ name=‘action’ value=‘kakunin’>確認画面へ</button></center>
 </form>
-
+</font>
 </body>
 </html>
