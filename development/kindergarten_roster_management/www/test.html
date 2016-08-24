@@ -1,0 +1,37 @@
+<body>
+<form name="form1">
+<SELECT name="point">
+<OPTION value="100">100ポイント</OPTION>
+<OPTION value="200">200ポイント</OPTION>
+<OPTION value="300">300ポイント</OPTION>
+<OPTION value="400">400ポイント</OPTION>
+<OPTION value="500">500ポイント</OPTION>
+</SELECT>
+
+<script type="text/javascript">
+//GET変数取得関数
+function get(varName){
+var varLimit=2;
+var i;
+var urlAry;
+var varAry;
+var workAry;
+
+urlAry=location.href.split('?',2);
+if(urlAry[1])varAry=urlAry[1].split('&',varLimit);
+
+if(varAry){
+for(i=0;i<varAry.length;i++){
+workAry=varAry[i].split('=',2)
+if(workAry[0]==varName)return workAry[1];
+}
+}
+return null;
+}
+
+//GET変数を取得
+var v=get("point");
+console.log(v);
+//SELECTに設定
+document.form1.point.value=v;
+</script>
