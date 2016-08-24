@@ -10,16 +10,20 @@
     <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
 <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+<title>園児名簿登録フォーム</title>
 </head>
+
 <body>
 
 
 <div class='header'><h2><center>つくしの子保育園<BR>園児名簿登録</center></h2></div>
 <p>以下に必要事項を入力してください
 </p>
-<form action=http://localhost:8888/comfirmation.php method=“post” enctype=“text/plain”>
-園児のお名前<BR>
-<INPUT type=“test” name=name></P>
+
+<form action=http://localhost:8888/home.php method=“post”>
+
+園児のお名前<BR><input type=“text” name=“nametest” >
+<BR>
 
 <!-- ▼郵便番号入力フィールド(7桁) -->
 郵便番号(半角数字)<BR><input type="text" name=zip11 size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">
@@ -28,7 +32,7 @@
 <BR>
 
 電話番号(緊急連絡先)(半角英数)<BR>
-<INPUT type=“test” name=“tel”></P>
+<INPUT type=“text” name=“tel”></P>
 卒園年度(在園中の方は卒園予定年度)<BR>
 <SELECT name=sotsuen>
 <OPTION value=“2010”>2010年</OPTION>
