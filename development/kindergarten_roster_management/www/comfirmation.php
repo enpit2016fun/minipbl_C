@@ -9,12 +9,11 @@
   </head>
   <body>
 
-<div class='header'><h2><center>つくしの子保育園<BR>　園児名簿登録　確認画面</center></h2></div>
+<div class='header'><h2><center><font face=monospace>つくしの子保育園<BR>　園児名簿登録　確認画面</font></center></h2></div>
   <p>以下の入力で正しいことを確認してください
   </p>
-<form>
-<!action=http://localhost:8888/home.html method="post" enctype="text/plain">
-
+<form action=http://localhost:8888/done.html method=“post”>
+<font face=fantasy>
   園児のお名前<BR>
 <?PHP echo $_POST[“name”];?>
   住所<BR>
@@ -30,10 +29,10 @@
 変更点があれば「戻る」ボタンを押してください
   </p>
 <p>
-
-<center><button type ='submit' name='http://localhost:8888/home.html' value='kakunin'>戻る</button></center>
-<center><button type ='submit' name='http://localhost:8888/done.html' value='kakunin'>登録する</button></center>
+</font>
+<center><button type ='submit' name='action' value='kakunin'>登録する</button></center>
 </p>
+
 </form>
   </body>
   </html>
