@@ -9,6 +9,9 @@
 <body>
     <div class='header'><h1>イベントハガキ作成</h1></div>
 
+    <h2><p id="test"><font size="7"></font></p></h2>
+    <p id="image"></p>
+
 
     <select name="select" onchange="select_outputSelectedValueAndText(this);">
         <option value="0">イベント</option>
@@ -19,8 +22,6 @@
         <option value="5">卒園式</option>
     </select>
     <br>
-
-
     <select name="year" onchange="year_outputSelectedValueAndText(this);">
         <option value="0">年</option>
         <option value="2016">2016年</option>
@@ -49,7 +50,6 @@
         <option value="2039">2039年</option>
         <option value="2040">2040年</option>
     </select>
-
 
     <select name="month" onchange="month_outputSelectedValueAndText(this);">
         <option value="0">月</option>
@@ -101,6 +101,7 @@
         <option value="30">30日</option>
         <option value="31">31日</option>
     </select>
+
     <select name="week" onchange="week_outputSelectedValueAndText(this);">
         <option value="">曜日</option>
         <option value="日曜日">日曜日</option>
@@ -112,11 +113,11 @@
         <option value="土曜日">土曜日</option>
     </select>
 
+    <div id="message"></div>
 
     <input type="button" value="プリント" onclick="OnButtonClick();" />
 
     <script type="text/JavaScript">
-
         var eve = 0, year = 0, month = 0, day = 0, week = 0;
         var eveindx = 0, yearindx = 0, monthindx = 0, dayindx = 0, weekindx = 0;
         function select_outputSelectedValueAndText(obj) {
@@ -158,35 +159,42 @@
             week = obj.options[idx].text;  // 表示テキスト
             console.log('value = ' + value + ', ' + 'text = ' + week);
         }
-        
-        function OnButtonClick() {
-            if ((eve != 0) && (year != 0) && (month != 0) && (day != 0) && (week != 0)) { // インデックスが0番でなかったら
-                console.log(eve);
-                //var text = "イベント：" + eve + " " + year + month + day + week;
-                //document.write(text);
 
+        function OnButtonClick() {
+            if ((eveindx != 0) && (yearindx != 0) && (monthindx != 0) && (dayindx != 0) && (weekindx != 0)) { // インデックスが0番でなかったら
+                var text = (year + month + day + week);
+                document.getElementById("test").innerHTML = (year + month + day + week);
+                document.getElementById("image").innerHTML = "<img src=\"./img/bazzer.jpg\">";
+
+                //var elem = document.getElementById("test");
+                //elem.innerHTML = "<span style='color: red;'></span>";
+
+                console.log(eve);
+              
                 if (eveindx == "1") {
-                    document.write('<img src="./img/bazzer.jpg" width="792" height="568" />');
-                    document.write(year + month + day + week);
+                    document.getElementById("image").innerHTML = "<img src=\"./img/bazzer.jpg\">";
                 } else if (eveindx == "2") {
-                    document.write('<img src="./img/sports.jpg" width="792" height="568" />');
-                    document.write(year + month + day + week);
+                    //document.write('<img src="./img/sports.jpg" width="792" height="568" />');
+                    //document.write(year + month + day + week);
+                    document.getElementById("image").innerHTML = "<img src=\"./img/sports.jpg\">";
                 } else if (eveindx == "3") {
-                    document.write('<img src="./img/matsuri.jpg" width="792" height="568" />');
-                    document.write(year + month + day + week);
+                    //document.write('<img src="./img/matsuri.jpg" width="792" height="568" />');
+                    //document.write(year + month + day + week);
+                    document.getElementById("image").innerHTML = "<img src=\"./img/matsuri.jpg\">";
                 } else if (eveindx == "4") {
-                    document.write('<img src="./img/mochi.jpg" width="792" height="568" />');
-                    document.write(year + month + day + week);
+                    //document.write('<img src="./img/mochi.jpg" width="792" height="568" />');
+                    //document.write(year + month + day + week);
+                    document.getElementById("image").innerHTML = "<img src=\"./img/mochi.jpg\">";
                 } else if (eveindx == "5") {
-                    document.write('<img src="./img/sotsuenshiki.jpg" width="792" height="568" />');
-                    document.write(year + month + day + week);
+                    //document.write('<img src="./img/sotsuenshiki.jpg" width="792" height="568" />');
+                    //document.write(year + month + day + week);
+                    document.getElementById("image").innerHTML = "<img src=\"./img/sotsuenshiki.jpg\">";
                 }
             } else {
                 alert("選択して下さい");
             }
         }
 
-        
     </script>
 
 
