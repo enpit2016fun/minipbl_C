@@ -115,8 +115,9 @@
 
     <div id="message"></div>
 
-    <input type="button" value="プリント" onclick="OnButtonClick();" />
-
+    <input type="button" value="プレビュー" onclick="OnButtonClick();" />
+    <br>
+    <input type="button" value="印刷" onclick="Printout();" />
     <script type="text/JavaScript">
         var eve = 0, year = 0, month = 0, day = 0, week = 0;
         var eveindx = 0, yearindx = 0, monthindx = 0, dayindx = 0, weekindx = 0;
@@ -158,6 +159,10 @@
             weekindx = value;
             week = obj.options[idx].text;  // 表示テキスト
             console.log('value = ' + value + ', ' + 'text = ' + week);
+        }
+
+        function Printout() {
+            document.write('<img src="./img/load.gif" width="792" height="568" />');
         }
 
         function OnButtonClick() {
