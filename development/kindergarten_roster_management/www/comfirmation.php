@@ -10,24 +10,28 @@
   <body>
 
 <div class='header'><h2><center><font face=monospace>つくしの子保育園<BR>　園児名簿登録　確認画面</font></center></h2></div>
-  <p>以下の入力で正しいことを確認してください
-  </p>
+  <center><p>以下の入力で正しいことを確認してください
+  </p></center>
+
 <form action=http://localhost:8888/done.html method=“post”>
 <font face=fantasy>
-  園児のお名前<BR>
-<?PHP echo $_POST[“name”];?>
-  住所<BR>
-<?PHP echo $_POST[“zip11”];?>
-<?PHP echo $_POST[“addr11”];?>
-  電話番号(緊急連絡先)<BR>
-<?PHP echo $_POST[“mail”];?>  
+園児のお名前<BR>
+<?PHP echo $_POST["name"];?><BR>
+郵便番号と住所<BR>
+<?PHP echo $_POST["zip11"];?><BR>
+<?PHP echo $_POST["addr11"];?><BR>
+電話番号(緊急連絡先)<BR>
+<?PHP echo $_POST["tel"];?><BR>
 
-  卒園年度(在園中の方は卒園予定年度)<BR>
-<?PHP echo $_POST[“sotuen”];?>
+メールアドレス<BR>
+<?PHP echo $_POST["mail"];?><BR>
 
- <p>以上の入力でよろしければ「登録する」ボタンを,<BR>
+卒園年度(在園中の方は卒園予定年度)<BR>
+<?PHP echo $_POST["sotuen"];?><BR>
+
+ <center><p>以上の入力でよろしければ「登録する」ボタンを,<BR>
 変更点があれば「戻る」ボタンを押してください
-  </p>
+  </p></center>
 <p>
 </font>
 <center><button type ='submit' name='action' value='kakunin'>登録する</button></center>
