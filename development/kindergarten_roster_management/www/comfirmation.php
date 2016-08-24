@@ -16,18 +16,18 @@
 <form action=http://localhost:8888/done.html method=“post”>
 <font face=fantasy>
 園児のお名前<BR>
-<?PHP echo $_GET['name'];?><BR>
+<?PHP echo $_POST["name"];?><BR>
 郵便番号と住所<BR>
-<?PHP echo $_GET['zip11'];?><BR>
-<?PHP echo $_GET['addr11'];?><BR>
+<?PHP echo $_POST["zip11"];?><BR>
+<?PHP echo $_POST["addr11"];?><BR>
 電話番号(緊急連絡先)<BR>
-<?PHP echo $_GET['tel'];?><BR>
+<?PHP echo $_POST["tel"];?><BR>
 
 メールアドレス<BR>
-<?PHP echo $_GET['mail'];?><BR>
+<?PHP echo $_POST["mail"];?><BR>
 
 卒園年度(在園中の方は卒園予定年度)<BR>
-<?PHP echo $_POST[“sotuen”];?><BR>
+<?PHP echo $_POST["sotuen"];?><BR>
 
  <center><p>以上の入力でよろしければ「登録する」ボタンを,<BR>
 変更点があれば「戻る」ボタンを押してください
