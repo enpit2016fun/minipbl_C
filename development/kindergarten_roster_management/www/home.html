@@ -17,20 +17,20 @@
 <div class='header'><h2><center>つくしの子保育園<BR>園児名簿登録</center></h2></div>
 <p>以下に必要事項を入力してください
 </p>
-<form action=comfirmation.php method=“post” enctype=“text/plain”>
+<form action=http://localhost:8888/comfirmation.php method=“post” enctype=“text/plain”>
 園児のお名前<BR>
-<INPUT type=“test” name=“name”></P>
+<INPUT type=“test” name=name></P>
 
 <!-- ▼郵便番号入力フィールド(7桁) -->
-郵便番号(半角数字)<BR><input type="text" name="zip11" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">
+郵便番号(半角数字)<BR><input type="text" name=zip11 size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');">
 <!-- ▼住所入力フィールド(都道府県+以降の住所) -->
-<BR>住所(郵便番号に応じて自動で入力されます)<BR><input type="text" name="addr11" size="60">
+<BR>住所(郵便番号に応じて自動で入力されます)<BR><input type="text" name=addr11 size="60">
 <BR>
 
 電話番号(緊急連絡先)(半角英数)<BR>
 <INPUT type=“test” name=“tel”></P>
 卒園年度(在園中の方は卒園予定年度)<BR>
-<SELECT name=“sotsuen”>
+<SELECT name=sotsuen>
 <OPTION value=“2010”>2010年</OPTION>
 <OPTION value=“2011”>2011年</OPTION>
 <OPTION value=“2012”>2012年</OPTION>
@@ -50,9 +50,9 @@
 </SELECT>
 
 <P>メールアドレス(任意)(半角英数)<BR>
-<INPUT type=“test” name=“mail”>@
+<INPUT type=“test” name=mail>@
 
-<SELECT name=“mailadress”>
+<SELECT name=mailadress>
 <OPTION value=“docomo”>docomo.ne.jp</OPTION>
 <OPTION value=“au”>ezweb.ne.jp</OPTION>
 <OPTION value=“soft bank”>softbank.ne.jp</OPTION>
@@ -60,7 +60,7 @@
 <OPTION value=“gmail”>gmail.com</OPTION>
 </SELECT>
 <BR>上記のメールアドレスにない方はこちらに入力してください↓<BR>
-<INPUT type=“test” name=“mail”>
+<INPUT type=“test” name=mail>
 
 </p>
 
