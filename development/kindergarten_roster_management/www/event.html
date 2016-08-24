@@ -9,6 +9,7 @@
 <body>
     <div class='header'><h1>イベントハガキ作成</h1></div>
 
+    <h2><p id="aisatsu"><font size="7"></font></p></h2>
     <h2><p id="test"><font size="7"></font></p></h2>
     <p id="image"></p>
 
@@ -21,7 +22,7 @@
         <option value="4">餅つき</option>
         <option value="5">卒園式</option>
     </select>
-    <br>
+
     <select name="year" onchange="year_outputSelectedValueAndText(this);">
         <option value="0">年</option>
         <option value="2016">2016年</option>
@@ -104,13 +105,13 @@
 
     <select name="week" onchange="week_outputSelectedValueAndText(this);">
         <option value="">曜日</option>
-        <option value="日曜日">日曜日</option>
-        <option value="月曜日">月曜日</option>
-        <option value="火曜日">火曜日</option>
-        <option value="水曜日">水曜日</option>
-        <option value="木曜日">木曜日</option>
-        <option value="金曜日">金曜日</option>
-        <option value="土曜日">土曜日</option>
+        <option value="(日)">日曜日</option>
+        <option value="(月)">月曜日</option>
+        <option value="(火)">火曜日</option>
+        <option value="(水)">水曜日</option>
+        <option value="(木)">木曜日</option>
+        <option value="(金)">金曜日</option>
+        <option value="(土)">土曜日</option>
     </select>
 
     <div id="message"></div>
@@ -162,20 +163,24 @@
         }
 
         function Printout() {
-            document.write('<img src="./img/load.gif" width="792" height="568" />');
+            if ((eveindx != 0) && (yearindx != 0) && (monthindx != 0) && (dayindx != 0) && (weekindx != 0)) {
+                document.write('<img src="./img/load.gif" width="100" height="100" />');
+                document.write("印刷中");
+            } else {
+                alert("印刷するものがありません");
+            }
         }
 
         function OnButtonClick() {
             if ((eveindx != 0) && (yearindx != 0) && (monthindx != 0) && (dayindx != 0) && (weekindx != 0)) { // インデックスが0番でなかったら
                 var text = (year + month + day + week);
-                document.getElementById("test").innerHTML = (year + month + day + week);
-                document.getElementById("image").innerHTML = "<img src=\"./img/bazzer.jpg\">";
+                document.getElementById("aisatsu").innerHTML = "<h3><p id=\"aisatsu\"><font size=\"2.9\" font-family:HGP創英角ﾎﾟｯﾌﾟ体;>学校の運うんどう会も終わって、まいにち、<br>べんきょう、スポーツ、あそびと、がんばっ<br>ていることと思います。<br>つくしの子では、水や、どろんこあそびを、<br>まいにち元気に、たのしんでいます。<br>まい年やっている、つくしの子バザーがある<br>ので、お友だちを誘ってぜひあそびにきませ<br>んか？待っています。</font></p></h3>";
+                document.getElementById("test").innerHTML = "<h2><p id=\"test\"><font size=\"5.5\">" + (year + month + day + weekindx) + "</font></p></h2>";
 
-                //var elem = document.getElementById("test");
-                //elem.innerHTML = "<span style='color: red;'></span>";
+                
 
                 console.log(eve);
-              
+
                 if (eveindx == "1") {
                     document.getElementById("image").innerHTML = "<img src=\"./img/bazzer.jpg\">";
                 } else if (eveindx == "2") {
