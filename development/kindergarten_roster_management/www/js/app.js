@@ -17,9 +17,10 @@
             var l = employees.length;
             var e;
             $('.table-striped').empty();
+            $('.table-striped').append('<tr><th>ID</th><th>所属</th><th>名前</th></tr>');
             for (var i = 0; i < l; i++) {
                 e = employees[i];
-                $('.table-striped').append('<tr><th><a href="detailRoster.html#employees/'+e.id+'">'+'<th>'+e.id+'</th>'+'<th>'+ e.firstName + ' ' + e.lastName + '</th>' + '<th>' + e.cellPhone + '</a></th></tr>');
+                $('.table-striped').append('<tr><th>'+e.id+'</th>'+ '<th><img src="img/rabit.png" alt="うさぎ組" height="50px" width="50px"/></th>' +'<th>'+ '<a href="detailRoster.html#employees/'+e.id+'">' + e.firstName + ' ' + e.lastName +'</a>'+'</th>'+'</tr>');
                 console.log("DBから値を取得");
             }
         });
