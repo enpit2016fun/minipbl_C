@@ -335,7 +335,6 @@ h2, .h2 {
   position: relative;
   top: 240px;
   left: 32px;
-
 }
 
 h3, .h3 {
@@ -346,7 +345,7 @@ position: relative;
 }
 
 h4, .h4 {
-  font-size: 18px;
+  font-size: 30px;
 }
 
 h5, .h5 {
