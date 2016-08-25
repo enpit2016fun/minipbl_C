@@ -17,6 +17,7 @@ html {
 
 body {
   margin: 0;
+background-color: #ffffff;
 }
 
 article,
@@ -279,6 +280,7 @@ a:active {
 }
 
 .bar-header-secondary ~ .content {
+overflow: scroll;
   padding-top: 88px;
 }
 
@@ -331,16 +333,16 @@ h1, .h1 {
 h2, .h2 {
   font-size: 300px;
   position: relative;
-  top: 150px;
-  left: 30px;
+  top: 240px;
+  left: 32px;
 
 }
 
 h3, .h3 {
-  font-size: 24px;
+  font-size: 300px;
 position: relative;
-  top: 100px;
-  left: 30px;
+  top: 180px;
+  left: 80px;
 }
 
 h4, .h4 {
@@ -507,6 +509,7 @@ input[type="button"] {
 }
 
 .bar-header-secondary {
+overflow: scroll;
   top: 44px;
 }
 
