@@ -10,7 +10,6 @@
     /* --------------------------------- Event Registration -------------------------------- */
       $('.search-key').on('keyup', findByName);
 
-
     /* ---------------------------------- Local Functions ---------------------------------- */
     function findByName() {
         service.findByName($('.search-key').val()).done(function (employees) {
