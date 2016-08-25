@@ -9,6 +9,10 @@
 <body>
     <div class='header'><h1>イベントハガキ作成</h1></div>
 
+    <!--<h2><p id="aisatsu"><font size="7"></font></p></h2>-->
+    <h2><p id="test"><font size="7"></font></p></h2>
+    <p id="image"></p>
+
 
     <select name="select" onchange="select_outputSelectedValueAndText(this);">
         <option value="0">イベント</option>
@@ -18,8 +22,6 @@
         <option value="4">餅つき</option>
         <option value="5">卒園式</option>
     </select>
-    <br>
-
 
     <select name="year" onchange="year_outputSelectedValueAndText(this);">
         <option value="0">年</option>
@@ -49,7 +51,6 @@
         <option value="2039">2039年</option>
         <option value="2040">2040年</option>
     </select>
-
 
     <select name="month" onchange="month_outputSelectedValueAndText(this);">
         <option value="0">月</option>
@@ -101,22 +102,207 @@
         <option value="30">30日</option>
         <option value="31">31日</option>
     </select>
+
     <select name="week" onchange="week_outputSelectedValueAndText(this);">
         <option value="">曜日</option>
-        <option value="日曜日">日曜日</option>
-        <option value="月曜日">月曜日</option>
-        <option value="火曜日">火曜日</option>
-        <option value="水曜日">水曜日</option>
-        <option value="木曜日">木曜日</option>
-        <option value="金曜日">金曜日</option>
-        <option value="土曜日">土曜日</option>
+        <option value="(日)">日曜日</option>
+        <option value="(月)">月曜日</option>
+        <option value="(火)">火曜日</option>
+        <option value="(水)">水曜日</option>
+        <option value="(木)">木曜日</option>
+        <option value="(金)">金曜日</option>
+        <option value="(土)">土曜日</option>
     </select>
 
+    <select name="hour_start" onchange="hour_start_outputSelectedValueAndText(this);">
+        <option value="0">開始：時間</option>
+        <option value="00:">00時</option>
+        <option value="01:">01時</option>
+        <option value="02:">02時</option>
+        <option value="03:">03時</option>
+        <option value="04:">04時</option>
+        <option value="05:">05時</option>
+        <option value="06:">06時</option>
+        <option value="07:">07時</option>
+        <option value="08:">08時</option>
+        <option value="09:">09時</option>
+        <option value="10:">10時</option>
+        <option value="11:">11時</option>
+        <option value="12:">12時</option>
+        <option value="13:">13時</option>
+        <option value="14:">14時</option>
+        <option value="15:">15時</option>
+        <option value="16:">16時</option>
+        <option value="17:">17時</option>
+        <option value="18:">18時</option>
+        <option value="19:">19時</option>
+        <option value="20:">20時</option>
+        <option value="21:">21時</option>
+        <option value="22:">22時</option>
+        <option value="23:">23時</option>
+    </select>
 
-    <input type="button" value="プリント" onclick="OnButtonClick();" />
+    <select name="minute_start" onchange="minute_start_outputSelectedValueAndText(this);">
+        <option value="0">開始：分</option>
+        <option value="00～">00分</option>
+        <option value="01～">01分</option>
+        <option value="02～">02分</option>
+        <option value="03～">03分</option>
+        <option value="04～">04分</option>
+        <option value="05～">05分</option>
+        <option value="06～">06分</option>
+        <option value="07～">07分</option>
+        <option value="08～">08分</option>
+        <option value="09～">09分</option>
+        <option value="10～">10分</option>
+        <option value="11～">11分</option>
+        <option value="12～">12分</option>
+        <option value="13～">13分</option>
+        <option value="14～">14分</option>
+        <option value="15～">15分</option>
+        <option value="16～">16分</option>
+        <option value="17～">17分</option>
+        <option value="18～">18分</option>
+        <option value="19～">19分</option>
+        <option value="20～">20分</option>
+        <option value="21～">21分</option>
+        <option value="22～">22分</option>
+        <option value="23～">23分</option>
+        <option value="24～">24分</option>
+        <option value="25～">25分</option>
+        <option value="26～">26分</option>
+        <option value="27～">27分</option>
+        <option value="28～">28分</option>
+        <option value="29～">29分</option>
+        <option value="30～">30分</option>
+        <option value="31～">31分</option>
+        <option value="32～">32分</option>
+        <option value="33～">33分</option>
+        <option value="34～">34分</option>
+        <option value="35～">35分</option>
+        <option value="36～">36分</option>
+        <option value="37～">37分</option>
+        <option value="38～">38分</option>
+        <option value="39～">39分</option>
+        <option value="40～">40分</option>
+        <option value="41～">41分</option>
+        <option value="42～">42分</option>
+        <option value="43～">43分</option>
+        <option value="44～">44分</option>
+        <option value="45～">45分</option>
+        <option value="46～">46分</option>
+        <option value="47～">47分</option>
+        <option value="48～">48分</option>
+        <option value="49～">49分</option>
+        <option value="50～">50分</option>
+        <option value="51～">51分</option>
+        <option value="52～">52分</option>
+        <option value="53～">53分</option>
+        <option value="54～">54分</option>
+        <option value="55～">55分</option>
+        <option value="56～">56分</option>
+        <option value="57～">57分</option>
+        <option value="58～">58分</option>
+        <option value="59～">59分</option>
+    </select>
 
+    <select name="hour_end" onchange="hour_end_outputSelectedValueAndText(this);">
+        <option value="0">終了：時間</option>
+        <option value="00:">00時</option>
+        <option value="01:">01時</option>
+        <option value="02:">02時</option>
+        <option value="03:">03時</option>
+        <option value="04:">04時</option>
+        <option value="05:">05時</option>
+        <option value="06:">06時</option>
+        <option value="07:">07時</option>
+        <option value="08:">08時</option>
+        <option value="09:">09時</option>
+        <option value="10:">10時</option>
+        <option value="11:">11時</option>
+        <option value="12:">12時</option>
+        <option value="13:">13時</option>
+        <option value="14:">14時</option>
+        <option value="15:">15時</option>
+        <option value="16:">16時</option>
+        <option value="17:">17時</option>
+        <option value="18:">18時</option>
+        <option value="19:">19時</option>
+        <option value="20:">20時</option>
+        <option value="21:">21時</option>
+        <option value="22:">22時</option>
+        <option value="23:">23時</option>
+    </select>
+
+    <select name="minute_end" onchange="minute_end_outputSelectedValueAndText(this);">
+        <option value="0">終了：分</option>
+        <option value="00">00分</option>
+        <option value="01">01分</option>
+        <option value="02">02分</option>
+        <option value="03">03分</option>
+        <option value="04">04分</option>
+        <option value="05">05分</option>
+        <option value="06">06分</option>
+        <option value="07">07分</option>
+        <option value="08">08分</option>
+        <option value="09">09分</option>
+        <option value="10">10分</option>
+        <option value="11">11分</option>
+        <option value="12">12分</option>
+        <option value="13">13分</option>
+        <option value="14">14分</option>
+        <option value="15">15分</option>
+        <option value="16">16分</option>
+        <option value="17">17分</option>
+        <option value="18">18分</option>
+        <option value="19">19分</option>
+        <option value="20">20分</option>
+        <option value="21">21分</option>
+        <option value="22">22分</option>
+        <option value="23">23分</option>
+        <option value="24">24分</option>
+        <option value="25">25分</option>
+        <option value="26">26分</option>
+        <option value="27">27分</option>
+        <option value="28">28分</option>
+        <option value="29">29分</option>
+        <option value="30">30分</option>
+        <option value="31">31分</option>
+        <option value="32">32分</option>
+        <option value="33">33分</option>
+        <option value="34">34分</option>
+        <option value="35">35分</option>
+        <option value="36">36分</option>
+        <option value="37">37分</option>
+        <option value="38">38分</option>
+        <option value="39">39分</option>
+        <option value="40">40分</option>
+        <option value="41">41分</option>
+        <option value="42">42分</option>
+        <option value="43">43分</option>
+        <option value="44">44分</option>
+        <option value="45">45分</option>
+        <option value="46">46分</option>
+        <option value="47">47分</option>
+        <option value="48">48分</option>
+        <option value="49">49分</option>
+        <option value="50">50分</option>
+        <option value="51">51分</option>
+        <option value="52">52分</option>
+        <option value="53">53分</option>
+        <option value="54">54分</option>
+        <option value="55">55分</option>
+        <option value="56">56分</option>
+        <option value="57">57分</option>
+        <option value="58">58分</option>
+        <option value="59">59分</option>
+    </select>
+
+    <div id="message"></div>
+
+    <input type="button" value="プレビュー" onclick="OnButtonClick();" />
+    <input type="button" value="印刷" onclick="Printout();" />
     <script type="text/JavaScript">
-
         var eve = 0, year = 0, month = 0, day = 0, week = 0;
         var eveindx = 0, yearindx = 0, monthindx = 0, dayindx = 0, weekindx = 0;
         function select_outputSelectedValueAndText(obj) {
@@ -158,35 +344,84 @@
             week = obj.options[idx].text;  // 表示テキスト
             console.log('value = ' + value + ', ' + 'text = ' + week);
         }
-        
+
+        function hour_start_outputSelectedValueAndText(obj) {
+            var idx = obj.selectedIndex;
+            var value = obj.options[idx].value; // 値
+            hour_start_indx = value;
+            hour_start= obj.options[idx].text;  // 表示テキスト
+            console.log('value = ' + value + ', ' + 'text = ' + hour_start);
+        }
+
+        function minute_start_outputSelectedValueAndText(obj) {
+            var idx = obj.selectedIndex;
+            var value = obj.options[idx].value; // 値
+            minute_start_indx = value;
+            minute_start = obj.options[idx].text;  // 表示テキスト
+            console.log('value = ' + value + ', ' + 'text = ' + minute_start);
+        }
+
+        function hour_end_outputSelectedValueAndText(obj) {
+            var idx = obj.selectedIndex;
+            var value = obj.options[idx].value; // 値
+            hour_end_indx = value;
+            hour_end = obj.options[idx].text;  // 表示テキスト
+            console.log('value = ' + value + ', ' + 'text = ' + hour_end);
+        }
+
+        function minute_end_outputSelectedValueAndText(obj) {
+            var idx = obj.selectedIndex;
+            var value = obj.options[idx].value; // 値
+            minute_end_indx = value;
+            minute_end = obj.options[idx].text;  // 表示テキスト
+            console.log('value = ' + value + ', ' + 'text = ' + minute_end);
+        }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+        function Printout() {
+            if ((eveindx != 0) && (yearindx != 0) && (monthindx != 0) && (dayindx != 0) && (weekindx != 0) && (hour_start != 0) && (minute_end != 0) && (hour_start != 0) && (minute_end != 0)) {
+                document.write('<img src="./img/load.gif" width="100" height="100" />');
+                document.write("印刷中");
+            } else {
+                alert("印刷するものがありません");
+            }
+        }
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
         function OnButtonClick() {
-            if ((eve != 0) && (year != 0) && (month != 0) && (day != 0) && (week != 0)) { // インデックスが0番でなかったら
+            if ((eveindx != 0) && (yearindx != 0) && (monthindx != 0) && (dayindx != 0) && (weekindx != 0) && (hour_start != 0) && (minute_end != 0) && (hour_start != 0) && (minute_end != 0)) { // インデックスが0番でなかったら
+                var text = (year + month + day + week);
+                //document.getElementById("aisatsu").innerHTML = "<h3><p id=\"aisatsu\"><font size=\"2.9\" font-family:HGP創英角ﾎﾟｯﾌﾟ体;>学校の運うんどう会も終わって、まいにち、<br>べんきょう、スポーツ、あそびと、がんばっ<br>ていることと思います。<br>つくしの子では、水や、どろんこあそびを、<br>まいにち元気に、たのしんでいます。<br>まい年やっている、つくしの子バザーがある<br>ので、お友だちを誘ってぜひあそびにきませ<br>んか？待っています。</font></p></h3>";
+                document.getElementById("test").innerHTML = "<h2><p id=\"test\"><font size=\"6\">" + (year + month + day + weekindx) + "<br>" + "　　" + (hour_start_indx + minute_start_indx + hour_end_indx + minute_end_indx) + "</font></p></h2>";
+
+                
+
                 console.log(eve);
-                //var text = "イベント：" + eve + " " + year + month + day + week;
-                //document.write(text);
 
                 if (eveindx == "1") {
-                    document.write('<img src="./img/bazzer.jpg" width="792" height="568" />');
-                    document.write(year + month + day + week);
+                    document.getElementById("image").innerHTML = "<img src=\"./img/bazzer.jpg\">";
                 } else if (eveindx == "2") {
-                    document.write('<img src="./img/sports.jpg" width="792" height="568" />');
-                    document.write(year + month + day + week);
+                    //document.write('<img src="./img/sports.jpg" width="792" height="568" />');
+                    //document.write(year + month + day + week);
+                    document.getElementById("image").innerHTML = "<img src=\"./img/sports.jpg\">";
                 } else if (eveindx == "3") {
-                    document.write('<img src="./img/matsuri.jpg" width="792" height="568" />');
-                    document.write(year + month + day + week);
+                    //document.write('<img src="./img/matsuri.jpg" width="792" height="568" />');
+                    //document.write(year + month + day + week);
+                    document.getElementById("image").innerHTML = "<img src=\"./img/matsuri.jpg\">";
                 } else if (eveindx == "4") {
-                    document.write('<img src="./img/mochi.jpg" width="792" height="568" />');
-                    document.write(year + month + day + week);
+                    //document.write('<img src="./img/mochi.jpg" width="792" height="568" />');
+                    //document.write(year + month + day + week);
+                    document.getElementById("image").innerHTML = "<img src=\"./img/mochi.jpg\">";
                 } else if (eveindx == "5") {
-                    document.write('<img src="./img/sotsuenshiki.jpg" width="792" height="568" />');
-                    document.write(year + month + day + week);
+                    //document.write('<img src="./img/sotsuenshiki.jpg" width="792" height="568" />');
+                    //document.write(year + month + day + week);
+                    document.getElementById("image").innerHTML = "<img src=\"./img/sotsuenshiki.jpg\">";
                 }
             } else {
                 alert("選択して下さい");
             }
         }
 
-        
     </script>
 
 
