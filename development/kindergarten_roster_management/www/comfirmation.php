@@ -9,8 +9,8 @@
   </head>
   <body>
 
-<div class='header'><h2><center><font face=monospace>つくしの子保育園<BR>　園児名簿登録　確認画面</font></center></h2></div>
-<center><img src="hoikuen.gif"  width="15%" height="15%"></center>
+<div class='header'><h4><center><font face=monospace>つくしの子保育園<BR>　園児名簿登録　確認画面</font></center></h4></div>
+<center><img src="img/hoikuen.gif"  width="15%" height="15%"></center>
   <center><p>以下の入力で正しいことを確認してください
   </p></center>
 
@@ -75,7 +75,7 @@
 </p>
 
 </form>
-<img src="tsukushi.gif"  width="50%" height="20%" ><img src="tsukushi.gif"  width="50%" height="20%">
+<img src="img/tsukushi.gif"  width="50%" height="20%" ><img src="img/tsukushi.gif"  width="50%" height="20%">
 
   </body>
   </html>
