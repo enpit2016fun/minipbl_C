@@ -1,0 +1,66 @@
+
+<!-- saved from url=(0033)http://127.0.0.1:50631/index.html -->
+<html data-brackets-id="1"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+</head>
+<body data-brackets-id="2">
+    <a href="javascript:history.back();">戻る</a>
+<script data-brackets-id="3" type="text/javascript"><!--
+myImage = new Array(	// 画像ファイル名の設定
+        "saru.jpg",	
+        "tori.jpg",	
+        "inu.jpg",	
+        "inoshishi.jpg",
+        "nezumi.jpg",	
+        "ushi.jpg",	
+        "tora.jpg",	
+        "usagi.jpg",
+        "doragon.jpg",	
+        "hebi.jpg",	
+        "uma.jpg",	
+        "hituji.jpg"
+        
+);	
+myNowCnt = 0;	// 現在表示している画像番号
+function myChange(){	// 定期的に画像を更新する関数
+    var today = new Date();
+    myNowCnt= (today.getFullYear()+1)%12;
+    document.sshow.src = myImage[myNowCnt];	// 次の画像を表示する
+    setTimeout( "myChange()" , 1000 );	// 1秒周期に画像を更新する
+}	
+// --></script>
+    
+
+
+    
+    
+    <TABLE border="0"  style="table-layout:fixed;" width="100%">
+            <caption><CENTER><h1> 年賀のサンプル</h1></CENTER></caption>
+            <TR>
+                <TD><CENTER><img data-brackets-id="4" src="./index_files/tori.jpg" width="50%" height="auto" name="sshow">
+                </CENTER>
+                </TD>
+                
+                <TD><CENTER><img src="nennga.jpg"width="50%" height="auto">
+                    </CENTER>
+                </TD>
+            </TR>
+        </TABLE>
+    
+
+    <script data-brackets-id="5" type="text/javascript"><!--
+    
+
+    
+    
+    
+myChange(); 
+// --></script>
+
+    
+    
+    
+    
+
+</body></html>
