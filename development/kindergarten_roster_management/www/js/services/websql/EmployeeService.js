@@ -20,6 +20,11 @@ var EmployeeService = function () {
         return deferred.promise();
     }
 
+    this.findHello = function(){
+      console.log("Hello!!!");
+    }
+
+
     this.findByName = function (searchKey) {
         var deferred = $.Deferred();
         this.db.transaction(
