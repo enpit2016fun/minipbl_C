@@ -342,7 +342,8 @@
             <br>
             <div id="image"></div>
             <div id="title"></div>
-            <div id="test" style="position:absolute;top:560px;left:80px;"></div>
+            <div id="QR"></div>
+            <div id="test" style="position:absolute;top:550px;left:80px;"></div>
 
         <!-------------------------------------------------------------------------------
           -------------------------------------------------------------------------------
@@ -461,25 +462,30 @@
 
                         if (eveindx == "1") {
                             document.getElementById("image").innerHTML = "<img src=\"./img/bazzer.jpg\">";
+                            document.getElementById("QR").innerHTML = "<img src=\"./img/QR.png\" style=\"position:absolute;top:350px;left:320px;\" width=\"60\" height=\"60\">";
                         } else if (eveindx == "2") {
                             //document.write('<img src="./img/sports.jpg" width="792" height="568" />');
                             //document.write(year + month + day + week);
                             document.getElementById("image").innerHTML = "<img src=\"./img/sports.jpg\">";
                             document.getElementById("title").innerHTML = "<img src=\"./img/sports_logo.jpg\" style=\"position:absolute;top:400px;left:20px;\">";
+                            document.getElementById("QR").innerHTML = "<img src=\"./img/QR.png\" style=\"position:absolute;top:350px;left:320px;\" width=\"60\" height=\"60\">";
                         } else if (eveindx == "3") {
                             //document.write('<img src="./img/matsuri.jpg" width="792" height="568" />');
                             //document.write(year + month + day + week);
                             document.getElementById("image").innerHTML = "<img src=\"./img/matsuri.jpg\">";
                             document.getElementById("title").innerHTML = "<img src=\"./img/matsuri_logo.png\" style=\"position:absolute;top:400px;left:20px;\">";
+                            document.getElementById("QR").innerHTML = "<img src=\"./img/QR.png\" style=\"position:absolute;top:350px;left:320px;\" width=\"60\" height=\"60\">";
                         } else if (eveindx == "4") {
                             //document.write('<img src="./img/mochi.jpg" width="792" height="568" />');
                             //document.write(year + month + day + week);
                             document.getElementById("image").innerHTML = "<img src=\"./img/mochi.jpg\">";
                             document.getElementById("title").innerHTML = "<img src=\"./img/mochi_logo.jpg\" style=\"position:absolute;top:400px;left:20px;\">";
+                            document.getElementById("QR").innerHTML = "<img src=\"./img/QR.png\" style=\"position:absolute;top:350px;left:320px;\" width=\"60\" height=\"60\">";
                         } else if (eveindx == "5") {
                             //document.write('<img src="./img/sotsuenshiki.jpg" width="792" height="568" />');
                             //document.write(year + month + day + week);
                             document.getElementById("image").innerHTML = "<img src=\"./img/sotsuenshiki.jpg\">";
+                            document.getElementById("QR").innerHTML = "<img src=\"./img/QR.png\" style=\"position:absolute;top:350px;left:320px;\" width=\"60\" height=\"60\">";
                         }
                     } else {
                         alert("選択して下さい");
