@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <title>園児名簿登録フォーム</title>
+</head>
+
+<body background=“0410_gingham.jpg” bgcolor=“#ffc8c8” text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000">
+
+<div class='header'><h2><center><font face=monospace>つくしの子保育園<BR>園児名簿登録</font></center></h2></div>
+<font face=sans-serif>
+<p><center>以下に必要事項を入力してください</center>
+</p>
+<form action="comfirmation.php" method="post">
+
+
+園児のお名前<BR><input type="text" name="name">
+<BR>
+
+<!-- ▼郵便番号入力フィールド(7桁) -->
+郵便番号(半角数字)<BR><input type="text" name="zip11" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','addr11','addr11');"/>
+<!-- ▼住所入力フィールド(都道府県+以降の住所) -->
+<BR>住所(郵便番号に応じて自動で入力されます)<BR><input type="text" name=addr11 size="60"/>
+<BR>
+
+電話番号(緊急連絡先)(半角英数)<BR>
+<INPUT type="text" name="tel"/></P>
+卒園年度(在園中の方は卒園予定年度)<BR>
+<SELECT name="sotsuen">
+<OPTION value="2010">2010年</OPTION>
+<OPTION value="2011">2011年</OPTION>
+<OPTION value="2012">2012年</OPTION>
+<OPTION value="2013">2013年</OPTION>
+<OPTION value="2014">2014年</OPTION>
+<OPTION value="2015">2015年</OPTION>
+<OPTION value="2016">2016年</OPTION>
+<OPTION value="2017">2017年</OPTION>
+<OPTION value="2018">2018年</OPTION>
+<OPTION value="2019">2019年</OPTION>
+<OPTION value="2020">2020年</OPTION>
+<OPTION value="2021">2021年</OPTION>
+<OPTION value="2022">2022年</OPTION>
+<OPTION value="2023">2023年</OPTION>
+<OPTION value="2024">2024年</OPTION>
+<OPTION value="2025">2025年</OPTION>
+</SELECT>
+
+<P>メールアドレス(任意)(半角英数)<BR>
+<INPUT type="text" name="mail1"/>@
+
+<SELECT name="mailaddress">
+<OPTION value="docomo.ne.jp">docomo.ne.jp</OPTION>
+<OPTION value="ezweb.ne.jp">ezweb.ne.jp</OPTION>
+<OPTION value="softbank.ne.jp">softbank.ne.jp</OPTION>
+<OPTION value="yahoo.co.jp">yahoo.co.jp</OPTION>
+<OPTION value="gmail.com">gmail.com</OPTION>
+</SELECT>
+<BR>上記のメールアドレスにない方は<BR>こちらに入力してください↓<BR>
+<INPUT type="text" name="mail2"/>
+
+</p>
+
+<center><button type ="submit" name="action" value="kakunin">確認画面へ</button></center>
+</font>
+</form>
+
+</body>
+</html>

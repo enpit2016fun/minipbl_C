@@ -1,0 +1,21 @@
+<html>
+<head>
+
+    <meta charset="utf-8">
+
+<title>終了テスト</title>
+</head>
+<body onUnload="window.opener.close()">
+このウインドウを閉じると終了する
+<!——-ここから動作に必要な文-->
+<script>
+function fnWinClose(){
+window.opener = window;
+var win = window.open(location.href,"_self");
+win.close();
+}
+</script>
+<input type="button" onclick="fnWinClose()"/>
+<!——-ここまで。ボタンの名称とかと合わせて書いてください-->
+</body>
+</html>
