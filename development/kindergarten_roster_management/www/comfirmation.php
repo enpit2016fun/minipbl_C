@@ -13,7 +13,7 @@
   <center><p>以下の入力で正しいことを確認してください
   </p></center>
 
-<form action=http://localhost:8888/done.html method=“post”>
+<form action=http://localhost:8888/close.html method=“post”>
 <font face=fantasy>
 園児のお名前<BR>
 </font>
@@ -64,5 +64,6 @@
 </p>
 
 </form>
+
   </body>
   </html>
