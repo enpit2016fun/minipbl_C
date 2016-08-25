@@ -1,74 +1,43 @@
-<html>
-<head>
 
-<!-<script src="js/開発_for_nenngajyou.js"></script>
-<meta charset="UTF-8"> 
-</head>
-<body>
-<!-  <input type="button" value="OK" onclick="printMsg()" >
-<img id="gazo" onclick="changeIMG()" src="akeome.png"
-   width="320" height="240" border="0" alt="">
-<br>
+<!-- saved from url=(0033)http://127.0.0.1:50631/index.html -->
+<html data-brackets-id="1"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body data-brackets-id="2">
+<script data-brackets-id="3" type="text/javascript"><!--
+myImage = new Array(	// 画像ファイル名の設定
+        "saru.jpg",	
+        "tori.jpg",	
+        "inu.jpg",	
+        "inoshishi.jpg",
+        "nezumi.jpg",	
+        "ushi.jpg",	
+        "tora.jpg",	
+        "usagi.jpg",
+        "doragon.jpg",	
+        "hebi.jpg",	
+        "uma.jpg",	
+        "hituji.jpg"
+        
+);	
+myNowCnt = 0;	// 現在表示している画像番号
+function myChange(){	// 定期的に画像を更新する関数
+    var today = new Date();
+    myNowCnt= (today.getFullYear()+1)%12;
+    document.sshow.src = myImage[myNowCnt];	// 次の画像を表示する
+    setTimeout( "myChange()" , 1000 );	// 1秒周期に画像を更新する
+}	
+// --></script>
+    
+<img data-brackets-id="4" src="./index_files/tori.jpg" width="300" height="500" name="sshow">
+<img src="nennga.jpg"width="300" height="500">
+<script data-brackets-id="5" type="text/javascript"><!--
     
     
-<img id="gazo" onclick="changeIMG()" src="eto_remake_nezumi.png"
-   width="320" height="240" border="0" alt="">
-
-
-<script>
-
-//画像を配列に格納する
-var img = new Array();
-
-img[0] = new Image();
-img[0].src = "eto_remake_nezumi.png";
-img[1] = new Image();
-img[1].src = "eto_remake_ushi.png";
-img[2] = new Image();
-img[2].src=  "eto_remake_tora.png";
-img[3] = new Image();
-img[3].src = "eto_remake_usagi.png";
-img[4] = new Image();
-img[4].src = "dragon.png";
-img[5] = new Image();
-img[5].src=  "eto_remake_hebi.png";
-img[6] = new Image();
-img[6].src = "eto_remake_uma.png";
-img[7] = new Image();
-img[7].src = "eto_remake_hitsuji.png";
-img[8] = new Image();
-img[8].src=  "eto_remake_saru.png";
-img[9] = new Image();
-img[9].src = "eto_remake_tori.png";
-img[10] = new Image();
-img[10].src = "eto_remake_inu.png";
-img[11] = new Image();
-img[11].src=  "eto_remake_inoshishi.png";
-
-//画像番号用のグローバル変数
-var cnt=0;
     
-//画像切り替え関数
-function changeIMG(){
-  
-  //画像番号を進める
-weeks=new Array("日","月","火","水","木","金","土");
-today=new Date();
-y=today.getFullYear();
-m=today.getMonth()+1;
-d=today.getDate();
-w=weeks[today.getDay()];
-document.write("今日は、<span>",y,"<\/span>年");
-document.write("<span>",m,"<\/span>月");
-document.write("<span>",d,"<\/span>日");
-document.write("<span>",w,"<\/span>曜日です。");
-    
-var i = (year + 8) % 12;
-  //画像を切り替える
-  //document.getElementById("gazo").src=img[i].src;
-}
+myChange(); 
+// --></script>
 
-</script>
-   
-</body>
-</html>
+    
+    
+    
+    
+
+</body></html>
