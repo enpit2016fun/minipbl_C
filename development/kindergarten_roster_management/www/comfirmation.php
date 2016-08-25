@@ -2,15 +2,14 @@
 <html>
  <head>
      <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-sScalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  
+     <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width,initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=1.0">
       <link href="assets/ratchet/css/ratchet.css" rel="stylesheet">
       <link href="assets/css/styles.css" rel="stylesheet">
   </head>
   <body>
 
 <div class='header'><h2><center><font face=monospace>つくしの子保育園<BR>　園児名簿登録　確認画面</font></center></h2></div>
-<center><img src="hoikuen.gif"  width="15%" height="15%"></center>
+<center><img src="img/hoikuen.gif"  width="15%" height="15%"></center>
   <center><p>以下の入力で正しいことを確認してください
   </p></center>
 
@@ -75,7 +74,7 @@
 </p>
 
 </form>
-<img src="tsukushi.gif"  width="50%" height="20%" ><img src="tsukushi.gif"  width="50%" height="20%">
+<img src="img/tsukushi.gif"  width="50%" height="20%" ><img src="img/tsukushi.gif"  width="50%" height="20%">
 
   </body>
   </html>
