@@ -279,6 +279,7 @@ a:active {
 }
 
 .bar-header-secondary ~ .content {
+overflow: scroll;
   padding-top: 88px;
 }
 
@@ -331,7 +332,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 300px;
   position: relative;
-  top: 150px;
+  top: 110px;
   left: 30px;
 
 }
@@ -507,6 +508,7 @@ input[type="button"] {
 }
 
 .bar-header-secondary {
+overflow: scroll;
   top: 44px;
 }
 
