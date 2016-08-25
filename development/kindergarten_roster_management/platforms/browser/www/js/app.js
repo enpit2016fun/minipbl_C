@@ -16,10 +16,12 @@
         service.findByName($('.search-key').val()).done(function (employees) {
             var l = employees.length;
             var e;
-            $('.employee-list').empty();
+            $('.table-striped').empty();
             for (var i = 0; i < l; i++) {
                 e = employees[i];
-                $('.employee-list').append('<li><a href="#employees/' + e.id + '">' + e.firstName + ' ' + e.lastName + '</a></li>');
+                $('.table-striped').append('<tr>
+                <th><a href="#employees/' + e.id + '">' + e.firstName + ' ' + e.lastName + '</th>' + '<th>' + e.cellPhone + '</a></th></tr>');
+                console.log("DBから値を取得");
             }
         });
     }
