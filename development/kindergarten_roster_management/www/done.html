@@ -9,7 +9,7 @@
       <link href="assets/css/styles.css" rel="stylesheet">
   </head>
 
-  <body>
+<body onUnload="window.opener.close()">>
 <font face=fantasy size="6">
  <center><p>登録 ありがとうございました
   </p>
@@ -22,11 +22,18 @@
 
 </font>
 
-<font face=fantasy size="hotpink">
-<INPUT TYPE=button VALUE="ブラウザを閉じる" onClick="window.close();" >
+<script>
+function fnWinClose(){
+window.opener = window;
+var win = window.open(location.href,"_self");
+win.close();
+}
+</script>
+<font face=fantasy>
+
+<input type="button" VALUE="ブラウザを閉じる" onclick="fnWinClose()"/>
 </center>
 </font>
-
 
 <img src="tsukushi.gif"  width="50%" height="20%" ><img src="tsukushi.gif"  width="50%" height="20%">
 
