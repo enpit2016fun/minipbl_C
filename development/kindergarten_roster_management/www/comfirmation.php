@@ -10,10 +10,11 @@
   <body>
 
 <div class='header'><h2><center><font face=monospace>つくしの子保育園<BR>　園児名簿登録　確認画面</font></center></h2></div>
+<center><img src="hoikuen.gif"  width="15%" height="15%"></center>
   <center><p>以下の入力で正しいことを確認してください
   </p></center>
 
-<form action=http://localhost:8888/close.html method=“post”>
+<form action=http://localhost:8888/done.html method=“post”>
 <font face=fantasy>
 園児のお名前<BR>
 </font>
@@ -54,16 +55,27 @@
 <?PHP echo $_POST["mail1"];?>@<?PHP echo $_POST["mailaddress"];?><BR>
 </font>
 
-<font face=fantasy>
- <center><p>以上の入力でよろしければ「登録する」ボタンを,<BR>
-変更点があれば「戻る」ボタンを押してください
+<font face=sans-serif>
+ <center><p>以上の入力でよろしければ「next」ボタンを,<BR>
+変更点があれば「back」ボタンを押してください
   </p></center>
 <p>
 </font>
-<center><button type ='submit' name='action' value='kakunin'>登録する</button></center>
+<!---
+<center><button type ='submit' onClick="document.location='close.html';">登録する</button></center>
+<center><button type ='submit' onClick="document.location='home.html';">戻る</button> </center>
+-->
+<center>
+<a href="home.html"><img src="btntbn06-back005.jpg" alt="戻る"></a>
+<a href="done.html"><img src="btntbn06-next005.jpg" alt="進む"></a>
+
+</center>
+
+
 </p>
 
 </form>
+<img src="tsukushi.gif"  width="50%" height="20%" ><img src="tsukushi.gif"  width="50%" height="20%">
 
   </body>
   </html>
