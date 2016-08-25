@@ -329,11 +329,18 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 30px;
+  font-size: 300px;
+  position: relative;
+  top: 150px;
+  left: 30px;
+
 }
 
 h3, .h3 {
   font-size: 24px;
+position: relative;
+  top: 100px;
+  left: 30px;
 }
 
 h4, .h4 {

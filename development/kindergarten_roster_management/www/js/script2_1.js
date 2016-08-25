@@ -1,0 +1,1 @@
+document.write('<img src="./img/maru.png" width="104" height="91" />');
